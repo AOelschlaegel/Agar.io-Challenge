@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_movement : MonoBehaviour 
 {
     public int Speed = 2;
-    public Text ScoreText;
+    //public Text ScoreText;
     public Camera MainCamera;
 
     private Vector3 _scale;
@@ -33,8 +33,8 @@ public class Player_movement : MonoBehaviour
     {
         if(other.tag == "enemy" && other.transform.localScale.x < transform.localScale.x) 
         {
-            _scale += other.transform.localScale
-            SetCountText();
+            _scale += other.transform.localScale;
+            //SetCountText();
             Debug.Log ("scale is :" + _scale);
             Destroy (other.gameObject);
 
@@ -45,9 +45,9 @@ public class Player_movement : MonoBehaviour
         }
     }
 
-    private void SetCountText()
+    /*private void SetCountText()
     {
         _score += other.transform.localScale.x;
         ScoreText.text = _score.ToString();
-    }
+    }*/
 }
